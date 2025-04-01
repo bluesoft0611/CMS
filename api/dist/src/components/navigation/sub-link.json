@@ -1,0 +1,18 @@
+{
+    "collectionName": "components_navigation_sub_links",
+    "info": {
+        "displayName": "subLink"
+    },
+    "options": {},
+    "attributes": {
+        "title": {
+            "type": "string"
+        },
+        "description": {
+            "type": "string"
+        },
+        "url": {
+            "type": "string"
+        }
+    }
+}

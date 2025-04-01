@@ -1,0 +1,30 @@
+{
+    "collectionName": "components_section_section6s",
+    "info": {
+        "displayName": "Section6"
+    },
+    "options": {},
+    "attributes": {
+        "title": {
+            "type": "string"
+        },
+        "description": {
+            "type": "text"
+        },
+        "url": {
+            "type": "string"
+        },
+        "numberedCards": {
+            "displayName": "Section6-Card1",
+            "type": "component",
+            "repeatable": true,
+            "component": "card.section6-card1"
+        },
+        "featureCards": {
+            "displayName": "Section6-Card2",
+            "type": "component",
+            "repeatable": true,
+            "component": "card.section6-card2"
+        }
+    }
+}

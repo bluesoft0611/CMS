@@ -1,0 +1,22 @@
+{
+    "collectionName": "components_section_sections",
+    "info": {
+        "displayName": "section",
+        "description": ""
+    },
+    "options": {},
+    "attributes": {
+        "type": {
+            "type": "enumeration",
+            "enum": [
+                "hero",
+                "textBlock",
+                "form",
+                "topBar"
+            ]
+        },
+        "content": {
+            "type": "json"
+        }
+    }
+}

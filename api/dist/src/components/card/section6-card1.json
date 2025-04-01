@@ -1,0 +1,25 @@
+{
+    "collectionName": "components_card_section6_card1s",
+    "info": {
+        "displayName": "Section6-Card1"
+    },
+    "options": {},
+    "attributes": {
+        "icon": {
+            "allowedTypes": [
+                "images",
+                "files",
+                "videos",
+                "audios"
+            ],
+            "type": "media",
+            "multiple": false
+        },
+        "title": {
+            "type": "string"
+        },
+        "description": {
+            "type": "string"
+        }
+    }
+}

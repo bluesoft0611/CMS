@@ -1,0 +1,15 @@
+{
+    "collectionName": "components_navigation_sub_menu2s",
+    "info": {
+        "displayName": "subMenu2",
+        "description": ""
+    },
+    "options": {},
+    "attributes": {
+        "articles": {
+            "type": "component",
+            "repeatable": true,
+            "component": "navigation.article"
+        }
+    }
+}

@@ -1,0 +1,20 @@
+{
+    "collectionName": "components_navigation_sub_menu_columns",
+    "info": {
+        "displayName": "subMenu1",
+        "description": ""
+    },
+    "options": {},
+    "attributes": {
+        "sections": {
+            "type": "component",
+            "repeatable": true,
+            "component": "navigation.column-section"
+        },
+        "featured": {
+            "type": "component",
+            "repeatable": true,
+            "component": "navigation.sub-link"
+        }
+    }
+}

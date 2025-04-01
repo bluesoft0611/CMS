@@ -1,0 +1,24 @@
+{
+  "collectionName": "components_section_section5s",
+  "info": {
+    "displayName": "Section5"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "subTitle": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "cards": {
+      "displayName": "Section5-Card",
+      "type": "component",
+      "repeatable": true,
+      "component": "card.section5-card"
+    }
+  }
+}

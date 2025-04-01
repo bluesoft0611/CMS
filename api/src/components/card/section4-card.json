@@ -1,0 +1,22 @@
+{
+  "collectionName": "components_card_section4_cards",
+  "info": {
+    "displayName": "Section4-Card"
+  },
+  "options": {},
+  "attributes": {
+    "icon": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
+    },
+    "title": {
+      "type": "string"
+    }
+  }
+}

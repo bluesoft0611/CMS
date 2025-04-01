@@ -1,0 +1,17 @@
+{
+  "collectionName": "components_navigation_column_sections",
+  "info": {
+    "displayName": "columnSection"
+  },
+  "options": {},
+  "attributes": {
+    "heading": {
+      "type": "string"
+    },
+    "links": {
+      "type": "component",
+      "repeatable": true,
+      "component": "navigation.sub-link"
+    }
+  }
+}

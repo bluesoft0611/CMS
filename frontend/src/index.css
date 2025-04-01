@@ -1,0 +1,128 @@
+@import 'swiper/css';
+@import 'swiper/css/navigation';
+@import 'swiper/css/pagination';
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.slider-container {
+  margin: 0 auto;
+  position: relative; /* Merged both definitions */
+}
+
+/* Custom Navigation Buttons */
+.swiper-button-prev,
+.swiper-button-next {
+  width: 40px;
+  height: 40px;
+  background-color: transparent;
+  border: 2px solid #fff; /* White border */
+  border-radius: 50%; /* Circular shape */
+  display: flex;
+  align-items: center;
+  margin-right: 200px!important;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+
+/* Icon Styling */
+.swiper-button-prev::after,
+.swiper-button-next::after {
+  font-size: 16px;
+  color: #fff; /* Arrow color */
+}
+
+/* Hover Effect */
+.swiper-button-prev:hover,
+.swiper-button-next:hover {
+  background-color: rgba(255, 255, 255, 0.2); /* Slight hover effect */
+}
+
+/* Position Buttons Bottom-Right */
+.swiper-button-prev {
+  left: auto;
+  right: 65px; /* Fine-tuned spacing */
+  bottom: 60px; /* Proper bottom alignment */
+  top: auto;
+  position: absolute;
+}
+
+.swiper-button-next {
+  right: 20px; /* Fine-tuned spacing */
+  bottom: 60px;
+  top: auto;
+  position: absolute;
+}
+
+/* Custom Pagination (Rectangular Dots) */
+.swiper-pagination-bullet {
+  width: 28px;
+  height: 2px;
+  background-color: #ddd;
+  border-radius: 2px; /* Slightly rounded for rectangle */
+  transition: all 0.3s ease;
+  margin-left: -1px !important;
+}
+
+.swiper-pagination-bullet-active {
+  width: 28px;
+  background-color: #fff; /* Active slide indicator */
+  border-radius: 2px;
+  margin-left: -1px !important;
+}
+
+/* Position Pagination at Bottom-Left */
+.swiper-pagination {
+    position: absolute;
+    padding-bottom: 70px;
+    padding-left: 160px;
+    display: flex;
+    justify-content: flex-start;
+    z-index: 10; /* ✅ Make sure it's visible */
+}
+
+.swiper-pagination2 {
+    position: absolute;
+    padding-bottom: 80px;
+    padding-left: 160px!important;
+    display: flex;
+    justify-content: flex-start;
+    z-index: 10; /* ✅ Make sure it's visible */
+}
+
+.swiper-pagination2 .swiper-pagination-bullet-active {
+    width: 28px;
+    background-color: #02284d; /* Active slide indicator */
+    border-radius: 2px;
+    margin-left: -1px !important;
+}
+
+.swiper-pagination2 .swiper-pagination-bullet {
+    width: 28px;
+    height: 2px;
+    background-color: #0054A3;
+    border-radius: 2px; /* Slightly rounded for rectangle */
+    transition: all 0.3s ease;
+    margin-left: -1px !important;
+}
+
+.section8 .swiper-button-next,
+.section8 .swiper-button-prev {
+    width: 40px;
+    height: 40px;
+    background-color: transparent;
+    border: 2px solid #68b3f8; /* White border */
+    border-radius: 50%; /* Circular shape */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+
+.section8 .swiper-button-prev::after,
+.section8 .swiper-button-next::after {
+  font-size: 16px;
+  color: #0054A3!important; /* Arrow color */
+  font-weight: bold;
+}

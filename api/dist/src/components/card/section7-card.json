@@ -1,0 +1,25 @@
+{
+    "collectionName": "components_card_section7_cards",
+    "info": {
+        "displayName": "Section7-Card"
+    },
+    "options": {},
+    "attributes": {
+        "icon": {
+            "allowedTypes": [
+                "images",
+                "files",
+                "videos",
+                "audios"
+            ],
+            "type": "media",
+            "multiple": false
+        },
+        "title": {
+            "type": "string"
+        },
+        "description": {
+            "type": "text"
+        }
+    }
+}

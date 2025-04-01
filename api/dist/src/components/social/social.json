@@ -1,0 +1,15 @@
+{
+    "collectionName": "components_social_socials",
+    "info": {
+        "displayName": "Social"
+    },
+    "options": {},
+    "attributes": {
+        "title": {
+            "type": "string"
+        },
+        "url": {
+            "type": "string"
+        }
+    }
+}

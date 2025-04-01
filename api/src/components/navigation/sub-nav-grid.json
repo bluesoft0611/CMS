@@ -1,0 +1,23 @@
+{
+  "collectionName": "components_navigation_sub_nav_grids",
+  "info": {
+    "displayName": "subMenu3",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "heading": {
+      "type": "string"
+    },
+    "featured": {
+      "type": "component",
+      "repeatable": true,
+      "component": "navigation.sub-link"
+    },
+    "articles": {
+      "type": "component",
+      "repeatable": true,
+      "component": "navigation.article"
+    }
+  }
+}

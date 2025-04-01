@@ -1,0 +1,16 @@
+{
+    "collectionName": "components_top_bar_top_bars",
+    "info": {
+        "displayName": "topBar",
+        "description": ""
+    },
+    "options": {},
+    "attributes": {
+        "Social": {
+            "displayName": "Social",
+            "type": "component",
+            "repeatable": true,
+            "component": "social.social"
+        }
+    }
+}

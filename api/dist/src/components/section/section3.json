@@ -1,0 +1,34 @@
+{
+    "collectionName": "components_section_section3s",
+    "info": {
+        "displayName": "Section3"
+    },
+    "options": {},
+    "attributes": {
+        "title": {
+            "type": "string"
+        },
+        "subTitle": {
+            "type": "string"
+        },
+        "description": {
+            "type": "text"
+        },
+        "cards": {
+            "displayName": "Section3-Card",
+            "type": "component",
+            "repeatable": true,
+            "component": "card.section3-card"
+        },
+        "image": {
+            "allowedTypes": [
+                "images",
+                "files",
+                "videos",
+                "audios"
+            ],
+            "type": "media",
+            "multiple": false
+        }
+    }
+}
