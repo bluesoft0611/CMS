@@ -13,7 +13,7 @@ export default function IndustryWrServe() {
             INDUSTRIES WE SERVE
           </h5>
           <div className="text-center max-w-3xl font-bold">
-            <h3 className="mb-10 text-primary text-xl md:text-3xl">
+            <h3 className="mb-10 text-primary text-3xl">
               Lorem ipsum dolor sit amet, consectetur adipisicing.
             </h3>
           </div>

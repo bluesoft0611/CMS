@@ -1,0 +1,122 @@
+/* Base Styles */
+
+/* Her section--------- */
+#services-hero {
+  background-image: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+}
+
+#services-hero .tile-heading {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  padding-top: 1.25rem;
+}
+
+#services-hero .row {
+  display: flex;
+  width: 100%;
+  gap: 2.5rem;
+}
+
+#services-hero .tile {
+  border-radius: 1.25rem;
+  max-height: 270px;
+  position: relative;
+  overflow: hidden;
+}
+
+#services-hero .tile-inner {
+  user-select: none;
+}
+
+#services-hero .tile h3 {
+  color: white;
+  font-weight: 400;
+}
+
+#services-hero .tile-heading h4 {
+  color: white;
+  font-weight: 900;
+  text-transform: uppercase;
+  border-bottom: 2px solid #f4a300;
+  width: fit-content;
+  padding-bottom: 0;
+}
+
+#services-hero .hide-on-hover {
+  transition: all 500ms ease-in-out;
+  width: 100%;
+  position: absolute;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  background-color: #0054a3b3;
+  transform: translateY(-100%);
+  height: 60%;
+}
+
+#services-hero .show-on-hover {
+  transform: translateY(100%);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 0.5rem;
+  transition: all 500ms ease-in-out;
+  background-color: #0054a3b3;
+  padding: 0.25rem 1.75rem 1rem 1rem;
+}
+
+#services-hero .btn-wrapper button:hover {
+  background-color: #fff;
+  color: #6d9fcb;
+}
+
+#services-hero .tile:hover .hide-on-hover {
+  transform: translateY(100%);
+}
+
+#services-hero .tile:hover .show-on-hover {
+  transform: translateY(-100%);
+}
+
+/* Responsive - Extra Small Screens (max-width: 639px) */
+
+@media (max-width: 639px) {
+  #services-hero .tile-heading {
+    gap: 0.75rem;
+    padding-top: 1.25rem;
+  }
+}
+
+/* Responsive - Medium Screens and Up (min-width: 768px) */
+
+@media (min-width: 768px) {
+  #services-hero .tile {
+    max-height: 355px;
+  }
+
+  #services-hero .tile-heading {
+    gap: 1.25rem;
+    padding-top: 2.5rem;
+  }
+
+  #services-hero .hide-on-hover {
+    padding-left: 3rem;
+    padding-right: 3rem;
+    height: 50%;
+  }
+
+  #services-hero .show-on-hover {
+    gap: 2.5rem;
+    padding-left: 3rem;
+    padding-right: 3rem;
+    padding-top: 1rem;
+    padding-bottom: 2.5rem;
+  }
+}
+
+/* Hero section styles END*------------------------ */
+
+#helper-sec {
+  background-image: url("../../../assets/images/flex-bg.png");
+}

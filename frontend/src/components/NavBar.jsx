@@ -118,7 +118,7 @@ export default function NavBar() {
       <nav className="lg:hidden relative w-full">
         <div className="max-layout-container flex justify-between items-center p-4">
           <Link to="/">
-            <img src={Logo_IMG} alt="logo" className="w-64" />
+            <img src={Logo_IMG} alt="logo" className="w-52" />
           </Link>
           <button
             onClick={() => setToggle((prevToggle) => !prevToggle)}
