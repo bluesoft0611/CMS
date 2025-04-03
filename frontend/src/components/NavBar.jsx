@@ -45,6 +45,7 @@ export default function NavBar() {
               <img src={Logo_IMG} alt="logo" className="w-80" />
             </Link>
 
+            {/* Links */}
             <div
               className={`relative flex items-center ${
                 search
@@ -80,8 +81,9 @@ export default function NavBar() {
               </ul>
             </div>
 
+            {/* Search field */}
             {search && (
-              <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-full flex justify-center px-6">
+              <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-full flex justify-end px-6">
                 <input
                   type="text"
                   placeholder="Search..."

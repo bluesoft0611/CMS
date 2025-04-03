@@ -25,7 +25,7 @@ export default function HelperSec() {
 export function OurPartners() {
   return (
     <section
-      class="bg-flex-bg bg-cover bg-center bg-no-repeat py-24 my-24"
+      class="bg-cover bg-center bg-no-repeat py-24 my-24"
       id="helper-sec"
     >
       <div class="max-layout-container text-white text-center">
@@ -35,20 +35,21 @@ export function OurPartners() {
         >
           Our partners
         </h5>
-        <div class="flex xs:flex-row xs:justify-center xs:flex-wrap xs:gap-y-8 xs:gap-x-4 gap-7 min-w-full">
-          <div class="logo-wrapper xs:w-[47%] w-1/5 cursor-pointer">
+
+        <div class="flex flex-row justify-center flex-wrap sm:flex-nowrap gap-y-8 gap-x-4 gap-7 min-w-full">
+          <div class="logo-wrapper w-[47%] md:w-1/5 cursor-pointer">
             <img src={LOGO_IMG} alt="" />
           </div>
-          <div class="logo-wrapper xs:w-[47%] w-1/5 cursor-pointer">
+          <div class="logo-wrapper w-[47%] md:w-1/5 cursor-pointer">
             <img src={LOGO_IMG} alt="" />
           </div>
-          <div class="logo-wrapper xs:w-[47%] w-1/5 cursor-pointer">
+          <div class="logo-wrapper w-[47%] md:w-1/5 cursor-pointer">
             <img src={LOGO_IMG} alt="" />
           </div>
-          <div class="logo-wrapper xs:w-[47%] w-1/5 cursor-pointer">
+          <div class="logo-wrapper w-[47%] md:w-1/5 cursor-pointer">
             <img src={LOGO_IMG} alt="" />
           </div>
-          <div class="logo-wrapper xs:w-[47%] w-1/5 cursor-pointer">
+          <div class="logo-wrapper w-[47%] md:w-1/5 cursor-pointer">
             <img src={LOGO_IMG} alt="" />
           </div>
         </div>
