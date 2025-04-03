@@ -25,7 +25,7 @@ export default function HelperSec() {
 export function OurPartners() {
   return (
     <section
-      class="bg-flex-bg bg-cover bg-center bg-no-repeat py-24"
+      class="bg-flex-bg bg-cover bg-center bg-no-repeat py-24 my-24"
       id="helper-sec"
     >
       <div class="max-layout-container text-white text-center">

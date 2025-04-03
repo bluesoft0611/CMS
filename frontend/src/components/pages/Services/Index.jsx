@@ -3,6 +3,9 @@ import HeroSec from "./HeroSec";
 import HelperSec, { OurPartners } from "../../helper/HelperSec";
 import Section2 from "./Section2";
 import Section4 from "./Section4";
+import ClientTestimonial from "./ClientTestimonial";
+import ExpertAndApproach from "./ExperAndAppro";
+import Section7 from "./Section7";
 import "./services.css";
 
 const myBreadcrumbs = [
@@ -42,7 +45,10 @@ export default function Services() {
       <HeroSec />
 
       {/* Section2 */}
-      {/* <Section2 /> */}
+      <Section2 />
+
+      {/* ClientTestimonial sec */}
+      <ClientTestimonial />
 
       {/* Helper Box */}
       <HelperSec />
@@ -50,8 +56,14 @@ export default function Services() {
       {/* Section4 */}
       <Section4 />
 
-      {/* Our Partners */}
+      {/* Our Partners Sec */}
       <OurPartners />
+
+      {/* Our Expertise and Approach Sec */}
+      <ExpertAndApproach />
+
+      {/* Section7 */}
+      <Section7 />
     </div>
   );
 }

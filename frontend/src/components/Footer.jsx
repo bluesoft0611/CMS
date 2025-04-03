@@ -101,7 +101,7 @@ export default function Footer() {
               <a href="/" class="flex">
                 <img
                   src={Logo_IMG}
-                  class="md:max-w-[240px] lg:max-w-[320px] object-contain cursor-pointer"
+                  class="lg:max-w-[320px] object-contain cursor-pointer"
                   alt="Officemotive Logo"
                 />
               </a>

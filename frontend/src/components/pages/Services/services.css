@@ -120,3 +120,11 @@
 #helper-sec {
   background-image: url("../../../assets/images/flex-bg.png");
 }
+
+#our-expertise .bg-img {
+  background-image: url("../../../assets/images/dariapimkina.jpg");
+}
+
+#our-approach .bg-img {
+  background-image: url("../../../assets/images/placeholder.jpg");
+}

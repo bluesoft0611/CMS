@@ -1,4 +1,6 @@
 import React from "react";
+import HANDSHAKE_IMG from "../../../assets/images/handshake.png";
+import SOLUTION_IMG from "../../../assets/images/solution.png";
 
 export default function Section2() {
   return (
@@ -38,7 +40,90 @@ export default function Section2() {
 
       {/* Second container */}
       <div class="max-layout-container border-b-[1px] border-solid border-primary">
-        <div class="flex flex-col mt-24 mb-32 gap-20"></div>
+        <div class="flex flex-col mt-24 mb-32 gap-20">
+          <div class="flex flex-col md:flex-row gap-20">
+            <div>
+              <img src={HANDSHAKE_IMG} alt="" class="h-20" />
+
+              <div class="pt-6">
+                <h4 class="py-3 text-[#4f565e] text-xl">
+                  Lorem ipsum dolor sit amet
+                </h4>
+                <p class="text-[#4f565e] text-xl">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae
+                  alias nemo voluptatem molestias.
+                </p>
+              </div>
+            </div>
+            <div>
+              <img src={HANDSHAKE_IMG} alt="" class="h-20" />
+
+              <div class="pt-6">
+                <h4 class="py-3 text-[#4f565e] text-xl">
+                  Lorem ipsum dolor sit amet
+                </h4>
+                <p class="text-[#4f565e] text-xl">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae
+                  alias nemo voluptatem molestias.
+                </p>
+              </div>
+            </div>
+            <div>
+              <img src={HANDSHAKE_IMG} alt="" class="h-20" />
+
+              <div class="pt-6">
+                <h4 class="py-3 text-[#4f565e] text-xl">
+                  Lorem ipsum dolor sit amet
+                </h4>
+                <p class="text-[#4f565e] text-xl">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae
+                  alias nemo voluptatem molestias.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="flex flex-col md:flex-row gap-20">
+            <div>
+              <img src={SOLUTION_IMG} alt="" class="h-20" />
+
+              <div class="pt-6">
+                <h4 class="py-3 text-[#4f565e] text-xl">
+                  Lorem ipsum dolor sit amet
+                </h4>
+                <p class="text-[#4f565e] text-xl">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae
+                  alias nemo voluptatem molestias.
+                </p>
+              </div>
+            </div>
+            <div>
+              <img src={SOLUTION_IMG} alt="" class="h-20" />
+
+              <div class="pt-6">
+                <h4 class="py-3 text-[#4f565e] text-xl">
+                  Lorem ipsum dolor sit amet
+                </h4>
+                <p class="text-[#4f565e] text-xl">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae
+                  alias nemo voluptatem molestias.
+                </p>
+              </div>
+            </div>
+            <div>
+              <img src={SOLUTION_IMG} alt="" class="h-20" />
+
+              <div class="pt-6">
+                <h4 class="py-3 text-[#4f565e] text-xl">
+                  Lorem ipsum dolor sit amet
+                </h4>
+                <p class="text-[#4f565e] text-xl">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae
+                  alias nemo voluptatem molestias.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
   );
