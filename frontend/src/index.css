@@ -1,10 +1,59 @@
-@import 'swiper/css';
-@import 'swiper/css/navigation';
-@import 'swiper/css/pagination';
+@import "swiper/css";
+@import "swiper/css/navigation";
+@import "swiper/css/pagination";
+@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@200;300;400;500;600;700;800&display=swap");
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+body {
+  font-family: "Nunito Sans", system-ui !important;
+}
+
+.max-layout-container {
+  max-width: 1540px;
+  margin: 0 auto;
+  padding-left: 32px;
+  padding-right: 32px;
+}
+
+.effect-b {
+  background-image: linear-gradient(
+    to right,
+    #0054a3,
+    #0054a3 50%,
+    #030d19 50%
+  );
+  background-size: 200% 100%;
+  background-position: -100%;
+  display: inline-block;
+  padding: 5px 0;
+  position: relative;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transition: all 0.3s ease-in-out;
+}
+
+.effect-b:hover {
+  background-position: 0;
+}
+
+.effect-b:hover::before {
+  width: 100%;
+}
+
+.effect-b::before {
+  content: "";
+  background: #0054a3;
+  display: block;
+  position: absolute;
+  bottom: -3px;
+  left: 0;
+  width: 0;
+  height: 3px;
+  transition: all 0.3s ease-in-out;
+}
 
 .slider-container {
   margin: 0 auto;
@@ -21,7 +70,7 @@
   border-radius: 50%; /* Circular shape */
   display: flex;
   align-items: center;
-  margin-right: 200px!important;
+  margin-right: 200px !important;
   justify-content: center;
   transition: all 0.3s ease;
 }
@@ -74,55 +123,62 @@
 
 /* Position Pagination at Bottom-Left */
 .swiper-pagination {
-    position: absolute;
-    padding-bottom: 70px;
-    padding-left: 160px;
-    display: flex;
-    justify-content: flex-start;
-    z-index: 10; /* ✅ Make sure it's visible */
+  position: absolute;
+  padding-bottom: 70px;
+  padding-left: 160px;
+  display: flex;
+  justify-content: flex-start;
+  z-index: 10; /* ✅ Make sure it's visible */
 }
 
 .swiper-pagination2 {
-    position: absolute;
-    padding-bottom: 80px;
-    padding-left: 160px!important;
-    display: flex;
-    justify-content: flex-start;
-    z-index: 10; /* ✅ Make sure it's visible */
+  position: absolute;
+  padding-bottom: 80px;
+  padding-left: 160px !important;
+  display: flex;
+  justify-content: flex-start;
+  z-index: 10; /* ✅ Make sure it's visible */
 }
 
 .swiper-pagination2 .swiper-pagination-bullet-active {
-    width: 28px;
-    background-color: #02284d; /* Active slide indicator */
-    border-radius: 2px;
-    margin-left: -1px !important;
+  width: 28px;
+  background-color: #02284d; /* Active slide indicator */
+  border-radius: 2px;
+  margin-left: -1px !important;
 }
 
 .swiper-pagination2 .swiper-pagination-bullet {
-    width: 28px;
-    height: 2px;
-    background-color: #0054A3;
-    border-radius: 2px; /* Slightly rounded for rectangle */
-    transition: all 0.3s ease;
-    margin-left: -1px !important;
+  width: 28px;
+  height: 2px;
+  background-color: #0054a3;
+  border-radius: 2px; /* Slightly rounded for rectangle */
+  transition: all 0.3s ease;
+  margin-left: -1px !important;
 }
 
 .section8 .swiper-button-next,
 .section8 .swiper-button-prev {
-    width: 40px;
-    height: 40px;
-    background-color: transparent;
-    border: 2px solid #68b3f8; /* White border */
-    border-radius: 50%; /* Circular shape */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: all 0.3s ease;
+  width: 40px;
+  height: 40px;
+  background-color: transparent;
+  border: 2px solid #68b3f8; /* White border */
+  border-radius: 50%; /* Circular shape */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
 }
 
 .section8 .swiper-button-prev::after,
 .section8 .swiper-button-next::after {
   font-size: 16px;
-  color: #0054A3!important; /* Arrow color */
+  color: #0054a3 !important; /* Arrow color */
   font-weight: bold;
+}
+
+@media screen and (max-width: 1220px) {
+  .max-layout-container {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
 }

@@ -1,18 +1,17 @@
-import TopBar from './TopBar';
-import NavBar from './NavBar';
-import Section1 from './Sections/Section1';
-import Section2 from './Sections/Section2';
-import Section3 from './Sections/Section3';
-import Section4 from './Sections/Section4';
-import Section5 from './Sections/Section5';
-import Section6 from './Sections/Section6';
-import Section7 from './Sections/Section7';
-import Section8 from './Sections/Section8';
-import Section9 from './Sections/Section9';
-import Contact from './Contact';
+import TopBar from "./TopBar";
+import NavBar from "./NavBar";
+import Section1 from "./Sections/Section1";
+import Section2 from "./Sections/Section2";
+import Section3 from "./Sections/Section3";
+import Section4 from "./Sections/Section4";
+import Section5 from "./Sections/Section5";
+import Section6 from "./Sections/Section6";
+import Section7 from "./Sections/Section7";
+import Section8 from "./Sections/Section8";
+import Section9 from "./Sections/Section9";
+import Contact from "./Contact";
 
 export default function SectionRenderer({ section, index }) {
-
   switch (section.__component) {
     case "top-bar.top-bar":
       return <TopBar key={index} />;

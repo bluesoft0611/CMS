@@ -1,3 +1,4 @@
+import { useEffect, useState } from "react";
 import {
   FaPhoneAlt,
   FaEnvelope,
@@ -5,83 +6,58 @@ import {
   FaFacebook,
   FaTwitter,
 } from "react-icons/fa";
-import { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
 export default function TopBar() {
-  const { slug } = useParams();
-  const [page, setPage] = useState(null);
-
-  const query = [
-    `filters[slug][$eq]=${slug}`,
-    `populate[sections][on][top-bar.top-bar][populate]=*`,
-  ].join("&");
+  const [headerActive, setHeaderActive] = useState(false);
 
   useEffect(() => {
-    fetch(`http://45.76.23.70:1337/api/pages?${query}`)
-      .then((res) => res.json())
-      .then((json) => {
-        const data = json.data[0];
-        console.log(data);
-        if (data) setPage(data.sections[0]);
-      });
-  }, [slug]);
+    const handleScroll = () => {
+      setHeaderActive(window.scrollY > 200);
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  const socialItems = [
+    { label: "LinkedIn", href: "#", icon: <FaLinkedin className="w-5 h-5" /> },
+    { label: "Facebook", href: "#", icon: <FaFacebook className="w-5 h-5" /> },
+    { label: "Twitter", href: "#", icon: <FaTwitter className="w-5 h-5" /> },
+    { label: "Login", href: "#" },
+  ];
 
   return (
-    <div className="bg-primary text-white text-sm px-36 py-3 flex justify-between items-center">
-      <div className="flex items-center gap-6">
-        <div className="flex items-center gap-2 text-base">
-          <FaPhoneAlt className="text-white" />
-          <span>
-            Call Us Today!{" "}
-            {page?.Social.filter((item) => item.title === "phone")[0]?.url}
-          </span>
+    <div
+      className={`bg-primary text-white w-full hidden md:block transition-all ${
+        headerActive ? "mt-[-50px]" : ""
+      }`}
+    >
+      <div className="max-layout-container text-sm py-3 flex flex-col md:flex-row justify-between md:items-center gap-3">
+        <div className="flex flex-col md:flex-row md:items-center gap-3">
+          <div className="flex items-center gap-2 text-base">
+            <FaPhoneAlt className="text-white" />
+            <span>Call Us Today! 800-784-9402</span>
+          </div>
+          <div className="flex items-center gap-2 text-base">
+            <FaEnvelope className="text-white" />
+            <span>emailexample@gmail.com</span>
+          </div>
         </div>
-        <div className="flex items-center gap-2 text-base">
-          <FaEnvelope className="text-white" />
-          <span>
-            {page?.Social.filter((item) => item.title === "email")[0]?.url}
-          </span>
-        </div>
-      </div>
 
-      <div className="flex items-center gap-4">
-        <a
-          href={
-            page?.Social.filter((item) => item.title === "linkedin")[0]?.url
-          }
-          target="_blank"
-          rel="noopener noreferrer"
-          aria-label="LinkedIn"
-          className="w-5 h-5"
-        >
-          <FaLinkedin className="w-5 h-5" />
-        </a>
-        <a
-          href={
-            page?.Social.filter((item) => item.title === "facebook")[0]?.url
-          }
-          target="_blank"
-          rel="noopener noreferrer"
-          aria-label="Facebook"
-          className="w-5 h-5"
-        >
-          <FaFacebook className="w-5 h-5" />
-        </a>
-        <a
-          href={page?.Social.filter((item) => item.title === "twitter")[0]?.url}
-          target="_blank"
-          rel="noopener noreferrer"
-          aria-label="Twitter"
-          className="w-5 h-5"
-        >
-          <FaTwitter className="w-5 h-5" />
-        </a>
-        <a
-          href={page?.Social.filter((item) => item.title === "login")[0]?.url}
-          className="ml-2 text-base"
-        >
-          Login
-        </a>
+        <div className="flex items-center gap-4">
+          {socialItems.map((item, ind) => (
+            <a
+              key={ind}
+              href={item.href}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label={item.label}
+              className={
+                item.label.toLowerCase() !== "login" ? `w-5 h-5` : "text-base"
+              }
+            >
+              {item?.icon || item.label}
+            </a>
+          ))}
+        </div>
       </div>
     </div>
   );
