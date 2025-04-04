@@ -190,40 +190,34 @@ body {
 }
 
 @media screen and (max-width: 1024px) {
-  /* .swiper-button-prev,
+  .swiper-button-prev,
   .swiper-button-next {
-    width: 36px;
-    height: 36px;
-    border: 1.5px solid #fff;
-    background-color: transparent;
-    bottom: 0;
-    top: auto;
     position: relative;
-    transform: none;
-    margin: 0 8px;
+    right: auto;
+    bottom: auto;
+    margin: 0;
+    display: none;
   }
 
-  .swiper-button-prev::after,
-  .swiper-button-next::after {
-    font-size: 16px;
-    color: #fff;
+  .swiper-pagination2 {
+    position: absolute;
+    padding-bottom: 50px;
+    padding-left: 0px !important;
+    display: flex;
+    margin-top: 20px;
+    justify-content: center;
+    z-index: 10; /* ✅ Make sure it's visible */
+  }
+
+  .section8 .swiper-button-prev,
+  .section8 .swiper-button-next {
+    display: none;
   }
 
   .swiper-pagination {
-    padding-bottom: 0;
-    padding-left: 0;
-    display: flex;
-    justify-content: flex-start;
-    margin-bottom: 16px;
     position: relative;
-  } */
-
-  /* Flexbox wrap for controls under the slider */
-  /* .section2 {
-    display: flex !important;
-    justify-content: space-between;
-    align-items: center;
-    flex-direction: row-reverse;
-    margin-top: 12px;
-  } */
+    padding: 0;
+    justify-content: center;
+    margin-top: 1rem;
+  }
 }
