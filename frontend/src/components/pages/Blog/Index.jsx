@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import CommonCard from "../../common/Card";
 import PLACEHOLDER_IMG from "../../../assets/images/placeholder.jpg";
+import PLACEHOLDER_ONE__IMG from "../../../assets/images/placeholder1.jpg";
+import PLACEHOLDER_TWO_IMG from "../../../assets/images/placeholder2.jpg";
 
 const myBreadcrumbs = [
   { label: "Home", link: "/", className: "text-[#003f7a] underline" },
@@ -21,6 +23,21 @@ export default function Blog() {
   };
 
   const baseButtonClasses = "bg-[#d9e5f1] hover:bg-[#d9e5f1] w-full";
+
+  const blogsItems = [
+    {
+      tags: ["Press", "Marketing", "Blog"],
+      imgPlaceholder: PLACEHOLDER_IMG,
+    },
+    { tags: ["Blog"], imgPlaceholder: PLACEHOLDER_ONE__IMG },
+    { tags: ["Media", "Business"], imgPlaceholder: PLACEHOLDER_TWO_IMG },
+    {
+      tags: ["Press", "Marketing", "Blog"],
+      imgPlaceholder: PLACEHOLDER_IMG,
+    },
+    { tags: ["Blog"], imgPlaceholder: PLACEHOLDER_ONE__IMG },
+    { tags: ["Media", "Business"], imgPlaceholder: PLACEHOLDER_TWO_IMG },
+  ];
 
   return (
     <div>
@@ -89,14 +106,14 @@ export default function Blog() {
       <section className="pb-24">
         <div className="max-layout-container">
           <div className="flex flex-col md:flex-row columns-3 gap-2 gap-y-16 justify-between flex-wrap my-16">
-            {Array.from({ length: 6 }).map((_, ind) => (
+            {blogsItems.map((blog, ind) => (
               <React.Fragment key={ind}>
                 <CommonCard
                   title="Lorem ipsum dolor sit amet consectetur adipisicing elit"
                   description="Lorem ipsum dolor sit, amet consectetur adipisicing elit. Labore sit voluptates undeconsequatur tempore inventore minima a..."
                   url="/blog/article"
-                  imgPlaceholder={PLACEHOLDER_IMG}
-                  tags={["Press", "Marketing", "Blog"]}
+                  imgPlaceholder={blog.imgPlaceholder}
+                  tags={blog.tags}
                   btnText="read more"
                 />
               </React.Fragment>

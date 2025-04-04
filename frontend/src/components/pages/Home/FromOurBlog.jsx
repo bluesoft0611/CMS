@@ -1,7 +1,18 @@
 import React from "react";
 import { BsArrowRight } from "react-icons/bs";
 import PLACEHOLDER_IMG from "../../../assets/images/placeholder2.jpg";
+import PLACEHOLDER_ONE__IMG from "../../../assets/images/placeholder1.jpg";
+import PLACEHOLDER_TWO_IMG from "../../../assets/images/placeholder2.jpg";
 import CommonCard from "../../common/Card";
+
+const blogsItems = [
+  {
+    tags: ["Press", "Marketing", "Blog"],
+    imgPlaceholder: PLACEHOLDER_IMG,
+  },
+  { tags: ["Blog"], imgPlaceholder: PLACEHOLDER_ONE__IMG },
+  { tags: ["Media", "Business"], imgPlaceholder: PLACEHOLDER_TWO_IMG },
+];
 
 export default function FromOurBlog() {
   return (
@@ -32,19 +43,13 @@ export default function FromOurBlog() {
         </div>
 
         <div className="overflow-auto md:overflow-visible mt-8 md:mt-24 gap-2 flex justify-between">
-          {Array.from({ length: 3 }).map((_, ind) => (
+          {blogsItems.map((blog, ind) => (
             <React.Fragment key={ind}>
               <CommonCard
                 title="Lorem ipsum dolor sit amet consectetur adipisicing elit"
                 url="/blog/article"
-                imgPlaceholder={PLACEHOLDER_IMG}
-                tags={
-                  ind === 0
-                    ? ["Press", "Marketing", "Blog"]
-                    : ind === 1
-                    ? ["Blog"]
-                    : ["Media", "Business"]
-                }
+                imgPlaceholder={blog.imgPlaceholder}
+                tags={blog.tags}
                 description="Lorem ipsum dolor sit, amet consectetur adipisicing elit. Labore
                 sit voluptates unde consequatur tempore inventore minima a..."
                 btnText="read more"
