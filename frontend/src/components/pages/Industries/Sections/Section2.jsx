@@ -50,40 +50,50 @@ const SliderComponent = () => {
             }}
             pagination={{ clickable: true, el: ".swiper-pagination" }}
             breakpoints={{
-              1024: {
+              1280: {
                 slidesPerView: 1.3,
                 spaceBetween: 20,
               },
-              768: {
+              1024: {
                 slidesPerView: 1.2,
-                spaceBetween: 15,
+                spaceBetween: 20,
               },
-              640: {
+              768: {
                 slidesPerView: 1.1,
-                spaceBetween: 10,
+                spaceBetween: 16,
+              },
+              0: {
+                slidesPerView: 1,
+                spaceBetween: 12,
               },
             }}
+            
             className="mySwiper ml-2 lg:ml-40"
           >
             {page?.cards?.map((slide, index) => (
-              <SwiperSlide
-                key={index}
-                style={{ width: "65%", marginRight: "20px" }}
-              >
-                <div className="flex flex-col-reverse lg:flex-row bg-white p-2 shadow-lg lg:max-h-[430px]">
-                  <div className="p-2 lg:p-10">
-                    <p class="font-nunito font-bold text-lg lg:text-[24px] lg:leading-[40px] tracking-normal max-w-[500px]">
+              <SwiperSlide key={index}>
+                <div className="flex flex-col-reverse lg:flex-row bg-white p-4 shadow-lg h-full min-h-[430px]">
+                  
+                  {/* Text Section – 65% on large screens */}
+                  <div className="p-4 lg:p-8 flex flex-col justify-around lg:basis-[65%]">
+                    <p className="font-nunito font-bold text-lg lg:text-[24px] lg:leading-[40px] tracking-normal max-w-[500px]">
                       {slide?.title}
                     </p>
-                    <p class="font-dm font-normal text-[16px] leading-[26px] tracking-normal align-bottom lg:mt-20">
+                    <p className="font-dm font-normal text-[16px] leading-[26px] tracking-normal">
                       {slide?.description}
                     </p>
                   </div>
-                  <img
-                    src={`${baseURL}${slide?.image?.url}`}
-                    alt="Slide"
-                    className="w-[383px] h-[413px] p-1"
-                  />
+              
+                  {/* Image Section – 35% on large screens */}
+                  <div className="flex items-center justify-center lg:items-end lg:justify-end lg:basis-[35%]">
+                    <div className="w-full max-w-[383px] h-[413px]">
+                      <img
+                        src={`${baseURL}${slide?.image?.url}`}
+                        alt="Slide"
+                        className="w-full h-full object-contain"
+                      />
+                    </div>
+                  </div>
                 </div>
               </SwiperSlide>
             ))}
@@ -97,26 +107,11 @@ const SliderComponent = () => {
         </div> */}
 
         {/* tried */}
-        <div
-          className="swiper-controls mt-4 flex items-center justify-between flex-wrap"
-          style={{ backgroundColor: "gray" }}
-        >
-          <div
-            className="swiper-pagination"
-            style={{ backgroundColor: "pink" }}
-          ></div>
-          <div
-            className="section2 flex space-x-4"
-            style={{ backgroundColor: "green" }}
-          >
-            <div
-              className="swiper-button-prev px-4 py-2 rounded-full cursor-pointer"
-              style={{ backgroundColor: "red" }}
-            ></div>
-            <div
-              className="swiper-button-next px-4 py-2 rounded-full cursor-pointer"
-              style={{ backgroundColor: "yellow" }}
-            ></div>
+        <div className="swiper-controls mt-6 flex items-center justify-between flex-wrap px-4 lg:px-20">
+          <div className="swiper-pagination"></div>
+          <div className="section2 flex space-x-4 mt-4 lg:mt-0">
+            <div className="swiper-button-prev px-4 py-2 rounded-full cursor-pointer border border-white"></div>
+            <div className="swiper-button-next px-4 py-2 rounded-full cursor-pointer border border-white"></div>
           </div>
         </div>
       </div>

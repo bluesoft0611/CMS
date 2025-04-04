@@ -44,7 +44,7 @@ function App() {
 
         <button
           onClick={toTop}
-          className={`fixed bottom-5 right-10 transition-opacity bg-primary px-5 py-[9px] text-white flex items-center rounded duration-400 ease-in ${
+          className={`fixed bottom-5 z-[1000] right-10 transition-opacity bg-primary px-5 py-[9px] text-white flex items-center rounded duration-400 ease-in ${
             activeBackToTop
               ? "opacity-100 pointer-events-auto"
               : "opacity-0 pointer-events-none"
