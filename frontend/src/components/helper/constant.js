@@ -166,14 +166,13 @@ export const Constant = {
     },
   ],
 
-  //   const duration = 6000;
   homeSlides: [
     {
       title: "Process Design",
       content: `
           <h1 class="font-bold text-[#d9f5f1] pb-7 uppercase text-4xl md:text-5xl">Maximize the potential of your business.</h1>
           <h5 class="text-primary-50 pb-8 text-2xl"> Achieve more, with less, by working smarter. Accelerate growth, improve profitability, and stay ahead. </h5>
-          <button class="bg-yellow-400 text-black text-base px-10 py-2 rounded  font-semibold">Find out More</button>
+          <button class="bg-yellow-400 text-black text-base px-10 py-2 rounded font-semibold">Find out More</button>
         `,
       image: CAROUSEL_IMG_ONE,
     },
@@ -182,7 +181,7 @@ export const Constant = {
       content: `
           <h1 class="font-bold text-[#d9f5f1] pb-7 uppercase text-4xl md:text-5xl">Integration-ready solutions. </h1>
           <h5 class="text-[#d9f5f1] pb-8 text-2xl"> Execute innovation strategies quickly and easily with our modular Business Engine Platform. </h5>
-          <button class="bg-yellow-400 text-black text-base px-10 py-2 rounded  font-semibold">Find out More</button>
+          <button class="bg-yellow-400 text-black text-base px-10 py-2 rounded font-semibold">Find out More</button>
         `,
       image: CAROUSEL_IMG_TWO,
     },
@@ -191,7 +190,7 @@ export const Constant = {
       content: `
           <h1 class="font-bold text-[#d9f5f1] pb-7 uppercase text-4xl md:text-5xl"> Position your business for success</h1>
           <h5 class="text-[#d9f5f1] pb-8 text-2xl"> Experience breakthrough performance as we direct, control, manage, and supervise your daily operations.</h5>
-          <button class="bg-yellow-400 text-black text-base px-10 py-2 rounded  font-semibold">Find out More</button>
+          <button class="bg-yellow-400 text-black text-base px-10 py-2 rounded font-semibold">Find out More</button>
         `,
       image: CAROUSEL_IMG_THREE,
     },
@@ -200,7 +199,7 @@ export const Constant = {
       content: `
           <h1 class="font-bold text-[#d9f5f1] pb-7 uppercase text-4xl md:text-5xl">Empower your business with next-level tech.</h1>
           <h5 class="text-[#d9f5f1] pb-8 text-2xl">Outperform continuously with future-ready custom technology.</h5>
-          <button class="bg-yellow-400 text-black text-base px-10 py-2 rounded  font-semibold">Find out More</button>
+          <button class="bg-yellow-400 text-black text-base px-10 py-2 rounded font-semibold">Find out More</button>
         `,
       image: CAROUSEL_IMG_FOUR,
     },

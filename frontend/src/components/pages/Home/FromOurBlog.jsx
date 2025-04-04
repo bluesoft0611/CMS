@@ -1,19 +1,7 @@
 import React from "react";
 import { BsArrowRight } from "react-icons/bs";
 import PLACEHOLDER_IMG from "../../../assets/images/placeholder2.jpg";
-
-const Tags = ({ tags }) => (
-  <div className="tags flex justify-center">
-    {tags.map((item, id) => (
-      <span
-        className="text-[#4f565e] border border-primary hover:bg-[#4d87bf33] hover:border-transparent px-2 py-1 m-1 text-sm font-semibold"
-        key={id}
-      >
-        {item}
-      </span>
-    ))}
-  </div>
-);
+import CommonCard from "../../common/Card";
 
 export default function FromOurBlog() {
   return (
@@ -44,87 +32,25 @@ export default function FromOurBlog() {
         </div>
 
         <div className="overflow-auto md:overflow-visible mt-8 md:mt-24 gap-2 flex justify-between">
-          <a
-            href="/blog/article"
-            className="post group hover:shadow-xl transition duration-300 ease-in-out cursor-pointer w-full md:w-[32%] max-w-md"
-          >
-            <div className="img-wrapper overflow-hidden">
-              <img
-                src={PLACEHOLDER_IMG}
-                alt=""
-                className="transition duration-300 ease-in-out group-hover:scale-110"
+          {Array.from({ length: 3 }).map((_, ind) => (
+            <React.Fragment key={ind}>
+              <CommonCard
+                title="Lorem ipsum dolor sit amet consectetur adipisicing elit"
+                url="/blog/article"
+                imgPlaceholder={PLACEHOLDER_IMG}
+                tags={
+                  ind === 0
+                    ? ["Press", "Marketing", "Blog"]
+                    : ind === 1
+                    ? ["Blog"]
+                    : ["Media", "Business"]
+                }
+                description="Lorem ipsum dolor sit, amet consectetur adipisicing elit. Labore
+                sit voluptates unde consequatur tempore inventore minima a..."
+                btnText="read more"
               />
-            </div>
-            <div className="my-4">
-              <Tags tags={["Press", "Marketing", "Blog"]} />
-            </div>
-            <div className="px-4 text-center">
-              <h5 className="group-hover:text-primary text-xl pb-5 px-4 font-semibold truncate">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit
-              </h5>
-              <div className="text-xl">
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Labore
-                sit voluptates unde consequatur tempore inventore minima a...
-              </div>
-              <button className="font-semibold text-primary uppercase flex m-auto py-6 group-hover:underline">
-                read more
-              </button>
-            </div>
-          </a>
-          <a
-            href="/blog/article"
-            className="group hover:shadow-xl transition duration-300 ease-in-out cursor-pointer w-full md:w-[32%] max-w-md"
-          >
-            <div className="img-wrapper overflow-hidden">
-              <img
-                src={PLACEHOLDER_IMG}
-                alt=""
-                className="transition duration-300 ease-in-out group-hover:scale-110"
-              />
-            </div>
-            <div className="my-4">
-              <Tags tags={["Blog"]} />
-            </div>
-            <div className="px-4 text-center">
-              <h5 className="group-hover:text-primary text-xl pb-5 px-4 font-semibold truncate">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit
-              </h5>
-              <div className="text-xl">
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Labore
-                sit voluptates unde consequatur tempore inventore minima a...
-              </div>
-              <button className="font-semibold text-primary uppercase flex m-auto py-6 group-hover:underline">
-                read more
-              </button>
-            </div>
-          </a>
-          <a
-            href="/blog/article"
-            className="group hover:shadow-xl transition duration-300 ease-in-out cursor-pointer w-full md:w-[32%] max-w-md"
-          >
-            <div className="img-wrapper overflow-hidden">
-              <img
-                src={PLACEHOLDER_IMG}
-                alt=""
-                className="transition duration-300 ease-in-out group-hover:scale-110"
-              />
-            </div>
-            <div className="my-4">
-              <Tags tags={["Media", "Business"]} />
-            </div>
-            <div className="px-4 text-center">
-              <h5 className="group-hover:text-primary text-xl pb-5 px-4 font-semibold truncate">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit
-              </h5>
-              <div className="text-xl">
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Labore
-                sit voluptates unde consequatur tempore inventore minima a...
-              </div>
-              <button className="font-semibold text-primary uppercase flex m-auto py-6 group-hover:underline">
-                read more
-              </button>
-            </div>
-          </a>
+            </React.Fragment>
+          ))}
         </div>
         <div className="text-center mt-6 w-full flex justify-center">
           <a

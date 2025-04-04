@@ -38,11 +38,10 @@ const HeroSec = () => {
       className="hero relative h-[60vh] max-h-[650px] pt-12 pb-4 lg:pt-0 xl:pb-12"
     >
       {/* Content */}
-      <div
-        className={`max-layout-container flex px-4 flex-col justify-center h-full`}
-      >
+      <div className="max-layout-container flex px-4 flex-col justify-center h-full">
         {/* details */}
         <div className="flex xs:pt-8 max-w-[45pc] lg:max-w-[37pc] xl:max-w-[50pc] items-center flex-col flex-1 pt-0 xl:pt-10">
+          {/* Images left content */}
           {homeSlides[activeSlide] && (
             <div className="text-white duration-500 transform translate-y-0 transition-transform duration-400 ease-out hover:translate-y-12">
               <div
@@ -56,14 +55,21 @@ const HeroSec = () => {
 
         {/* Images */}
         {homeSlides[activeSlide] && (
-          <div className="transition-all ease-in duration-1000 hidden lg:flex img-hero absolute right-0 bottom-0 top-0 w-2/5">
+          // <div className="transition-all ease-in duration-1000 hidden lg:flex img-hero absolute right-0 bottom-0 top-0 w-2/5" style={{transform: "fade"}}>
+          <div
+            className={`hidden lg:flex img-hero absolute right-0 bottom-0 top-0 w-2/5 transition-opacity duration-[900ms] ${
+              homeSlides[activeSlide] ? "opacity-100" : "opacity-0"
+            }`}
+          >
             <img
               src={homeSlides[activeSlide]?.image}
-              className="flex opacity-90 h-full w-full object-cover hover:opacity-100 ease-in duration-300 transition-all"
+              // className="flex opacity-90 h-full w-full object-cover hover:opacity-100 ease-in duration-300 transition-all"
+              className="hidden sm:flex opacity-90 h-full w-full object-cover hover:opacity-100 ease-in duration-300 transition-all"
             />
           </div>
         )}
 
+        {/* Navigations */}
         <div className="hero-navigation hidden lg:flex">
           <ul className="flex xl:gap-4">
             {homeSlides.map((slide, index) => (

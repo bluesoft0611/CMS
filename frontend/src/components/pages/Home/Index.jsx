@@ -3,10 +3,10 @@ import HeroSec from "./HeroSec";
 import Empowering from "./Empowering";
 import OurSolutions from "./OurSolutions";
 import IndustryWrServe from "./IndustryWrServe";
-import "./Home.css";
 import FromOurBlog from "./FromOurBlog";
 import Contact from "./Contact";
 import { IoTriangle } from "react-icons/io5";
+import "./Home.css";
 
 export default function Home() {
   const [active, setActive] = useState(false);

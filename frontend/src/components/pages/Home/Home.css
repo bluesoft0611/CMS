@@ -1,3 +1,5 @@
+@tailwind utilities;
+
 /* Hero sec styles */
 .hero {
   background-color: #082e58;
@@ -45,14 +47,12 @@
   clip-path: polygon(0% 0, 100% 0, 100% 100%, 17% 100%);
 }
 
-#hero .hero-li button {
+#hero button {
   display: block;
   position: relative;
-  padding: 10px 0;
-  color: #fff;
 }
 
-#hero .hero-li button::after {
+#hero button::after {
   content: "";
   position: absolute;
   bottom: 0;
@@ -76,16 +76,22 @@
 
 #hero .hero-li.active button::after {
   transform: scale(1);
-  transition: none;
+  /* transition: none; */
 }
 
-#hero .hero-link {
+/* #hero .hero-link {
   font-size: 16px;
   display: flex;
   align-items: center;
   margin-left: 0.75rem;
   margin-right: 0.75rem;
   font-weight: 600;
+} */
+
+.hero-li.active {
+  &button:after {
+    transition: none;
+  }
 }
 
 /* ---------------------- Hero sec styles end... */
@@ -143,4 +149,12 @@
   letter-spacing: 0.1em;
   --tw-text-opacity: 1;
   color: #0054a3;
+}
+
+/* tailwind classes */
+
+@layer utilities {
+  .hero-link {
+    @apply lg:text-[16px] xl:text-[20px] text-white  flex items-center mx-3 font-semibold;
+  }
 }
