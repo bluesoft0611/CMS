@@ -7,9 +7,26 @@ import Industries from "./components/pages/Industries/Index";
 import Insights from "./components/pages/Insights/Index";
 import Blog from "./components/pages/Blog/Index";
 import AboutUs from "./components/pages/AboutUs/Index";
-import Footer from "./components/Footer";
+import { IoTriangle } from "react-icons/io5";
+import { useEffect, useState } from "react";
 
 function App() {
+  const [activeBackToTop, setActiveBackToTop] = useState(false);
+
+  // handle back to top
+  useEffect(() => {
+    const handleScroll = () => {
+      setActiveBackToTop(window.scrollY > 700);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  const toTop = () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
+
   return (
     <>
       <NavBar />
@@ -24,8 +41,21 @@ function App() {
           <Route path="/blogs" element={<Blog />} />
           <Route path="*" element={<div className="p-6">404 Not Found</div>} />
         </Routes>
+
+        <button
+          onClick={toTop}
+          className={`fixed bottom-5 right-10 transition-opacity bg-primary px-5 py-[9px] text-white flex items-center rounded duration-400 ease-in ${
+            activeBackToTop
+              ? "opacity-100 pointer-events-auto"
+              : "opacity-0 pointer-events-none"
+          }`}
+        >
+          <span>Back to top</span>
+          <span className="ml-2">
+            <IoTriangle size={16} />
+          </span>
+        </button>
       </div>
-      <Footer />
     </>
   );
 }

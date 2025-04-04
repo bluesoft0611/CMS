@@ -5,12 +5,11 @@ import OurSolutions from "./OurSolutions";
 import IndustryWrServe from "./IndustryWrServe";
 import FromOurBlog from "./FromOurBlog";
 import Contact from "./Contact";
-import { IoTriangle } from "react-icons/io5";
+import Footer from "../../Footer";
 import "./Home.css";
 
 export default function Home() {
   const [active, setActive] = useState(false);
-  const [activeBackToTop, setActiveBackToTop] = useState(false);
   const [isContactTriggered, setIsContactTriggered] = useState(false);
 
   // handle contact form button
@@ -32,20 +31,6 @@ export default function Home() {
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
-
-  // handle back to top
-  useEffect(() => {
-    const handleScroll = () => {
-      setActiveBackToTop(window.scrollY > 700);
-    };
-
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
-
-  const toTop = () => {
-    window.scrollTo({ top: 0, behavior: "smooth" });
-  };
 
   return (
     <div>
@@ -78,19 +63,9 @@ export default function Home() {
         isContactTriggered={isContactTriggered}
         onClose={() => setIsContactTriggered(false)}
       />
-      <button
-        onClick={toTop}
-        className={`fixed bottom-5 right-10 transition-opacity bg-primary px-5 py-[9px] text-white flex items-center rounded duration-400 ease-in ${
-          activeBackToTop
-            ? "opacity-100 pointer-events-auto"
-            : "opacity-0 pointer-events-none"
-        }`}
-      >
-        <span>Back to top</span>
-        <span className="ml-2">
-          <IoTriangle size={16} />
-        </span>
-      </button>
+
+      {/* Footer */}
+      <Footer />
     </div>
   );
 }

@@ -15,7 +15,6 @@ const SliderComponent = () => {
   const [page, setPage] = useState(null);
 
   const query = [
-    // `filters[slug][$eq]=${slug}`,
     `filters[slug][$eq]=home`,
     `populate[sections][on][section.section2][populate][cards][populate]=image`,
   ].join("&");
@@ -30,11 +29,11 @@ const SliderComponent = () => {
   }, [slug]);
 
   return (
-    <div className="slider-container bg-primary h-[866px] flex flex-col justify-center">
-      <h2 class="font-nunito font-medium text-[50px] leading-[60px] tracking-normal text-center text-white">
+    <div className="slider-container bg-primary flex flex-col justify-center py-16 lg:py-32">
+      <h2 class="font-nunito font-medium text-3xl lg:text-[50px] leading-[60px] tracking-normal text-center text-white">
         {page?.title}
       </h2>
-      <p class="font-dm font-normal text-[16px] leading-[26px] tracking-normal text-center w-[60%] mx-auto text-white my-5">
+      <p class="font-dm font-normal text-base lg:text-lg leading-[26px] tracking-normal text-center w-[90%] lg:w-[60%] mx-auto text-white my-5">
         {page?.description}
       </p>
 
@@ -42,8 +41,8 @@ const SliderComponent = () => {
         <div class="relative">
           <Swiper
             modules={[Navigation, Pagination]}
-            spaceBetween={30}
-            slidesPerView={"auto"}
+            spaceBetween={16}
+            slidesPerView={1.1}
             centeredSlides={false}
             navigation={{
               nextEl: ".section2 .swiper-button-next",
@@ -64,19 +63,19 @@ const SliderComponent = () => {
                 spaceBetween: 10,
               },
             }}
-            className="mySwiper ml-40"
+            className="mySwiper ml-2 lg:ml-40"
           >
             {page?.cards?.map((slide, index) => (
               <SwiperSlide
                 key={index}
                 style={{ width: "65%", marginRight: "20px" }}
               >
-                <div className="flex bg-white p-2 shadow-lg max-h-[430px]">
-                  <div className="p-14">
-                    <p class="font-nunito font-bold text-[24px] leading-[40px] tracking-normal max-w-[500px]">
+                <div className="flex flex-col-reverse lg:flex-row bg-white p-2 shadow-lg lg:max-h-[430px]">
+                  <div className="p-2 lg:p-10">
+                    <p class="font-nunito font-bold text-lg lg:text-[24px] lg:leading-[40px] tracking-normal max-w-[500px]">
                       {slide?.title}
                     </p>
-                    <p class="font-dm font-normal text-[16px] leading-[26px] tracking-normal align-bottom mt-20">
+                    <p class="font-dm font-normal text-[16px] leading-[26px] tracking-normal align-bottom lg:mt-20">
                       {slide?.description}
                     </p>
                   </div>
@@ -90,10 +89,35 @@ const SliderComponent = () => {
             ))}
           </Swiper>
         </div>
-        <div className="swiper-pagination mt-4 flex justify-start"></div>
+        {/* original */}
+        {/* <div className="swiper-pagination mt-4 flex justify-start"></div>
         <div className="section2 flex justify-end space-x-4 mt-4">
           <div className="swiper-button-prev bg-gray-200 px-4 py-2 rounded-lg cursor-pointer"></div>
           <div className="swiper-button-next bg-gray-200 px-4 py-2 rounded-lg cursor-pointer"></div>
+        </div> */}
+
+        {/* tried */}
+        <div
+          className="swiper-controls mt-4 flex items-center justify-between flex-wrap"
+          style={{ backgroundColor: "gray" }}
+        >
+          <div
+            className="swiper-pagination"
+            style={{ backgroundColor: "pink" }}
+          ></div>
+          <div
+            className="section2 flex space-x-4"
+            style={{ backgroundColor: "green" }}
+          >
+            <div
+              className="swiper-button-prev px-4 py-2 rounded-full cursor-pointer"
+              style={{ backgroundColor: "red" }}
+            ></div>
+            <div
+              className="swiper-button-next px-4 py-2 rounded-full cursor-pointer"
+              style={{ backgroundColor: "yellow" }}
+            ></div>
+          </div>
         </div>
       </div>
     </div>

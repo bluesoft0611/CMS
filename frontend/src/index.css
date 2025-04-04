@@ -12,7 +12,7 @@ body {
 }
 
 .max-layout-container {
-  max-width: 1540px;
+  max-width: 1280px;
   margin: 0 auto;
   padding-left: 32px;
   padding-right: 32px;
@@ -187,4 +187,43 @@ body {
   .small-title {
     @apply text-[18px] font-semibold text-tertiary-400 tracking-widest;
   }
+}
+
+@media screen and (max-width: 1024px) {
+  /* .swiper-button-prev,
+  .swiper-button-next {
+    width: 36px;
+    height: 36px;
+    border: 1.5px solid #fff;
+    background-color: transparent;
+    bottom: 0;
+    top: auto;
+    position: relative;
+    transform: none;
+    margin: 0 8px;
+  }
+
+  .swiper-button-prev::after,
+  .swiper-button-next::after {
+    font-size: 16px;
+    color: #fff;
+  }
+
+  .swiper-pagination {
+    padding-bottom: 0;
+    padding-left: 0;
+    display: flex;
+    justify-content: flex-start;
+    margin-bottom: 16px;
+    position: relative;
+  } */
+
+  /* Flexbox wrap for controls under the slider */
+  /* .section2 {
+    display: flex !important;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row-reverse;
+    margin-top: 12px;
+  } */
 }

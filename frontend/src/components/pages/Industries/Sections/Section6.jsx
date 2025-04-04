@@ -1,24 +1,23 @@
 import React from "react";
-import { useEffect, useState } from 'react';
-import { Link, useParams } from 'react-router-dom';
+import { useEffect, useState } from "react";
+import { Link, useParams } from "react-router-dom";
 
 const baseURL = "http://45.76.23.70:1337";
 
 const Section6 = () => {
-
   const { slug } = useParams();
   const [page, setPage] = useState(null);
 
   const query = [
-    `filters[slug][$eq]=${slug}`,
+    `filters[slug][$eq]=home`,
     `populate[sections][on][section.section6][populate][numberedCards][populate]=icon`,
-    `populate[sections][on][section.section6][populate][featureCards][populate]=icon`
-  ].join('&');
+    `populate[sections][on][section.section6][populate][featureCards][populate]=icon`,
+  ].join("&");
 
   useEffect(() => {
     fetch(`http://45.76.23.70:1337/api/pages?${query}`)
-      .then(res => res.json())
-      .then(json => {
+      .then((res) => res.json())
+      .then((json) => {
         const data = json.data[0];
         console.log(data);
         if (data) setPage(data.sections[0]);
@@ -26,14 +25,14 @@ const Section6 = () => {
   }, [slug]);
 
   return (
-    <div className="bg-primary text-white py-16 h-[937px] flex flex-col justify-center">
-      <div className="container mx-auto px-4 lg:px-16">
-        <div className="grid grid-cols-1 lg:grid-cols-[40%_60%] gap-12">
-          <div>
-            <h2 class="font-nunito font-medium text-[50px] leading-[60px] tracking-normal max-w-[367px]">
+    <div className="bg-primary text-white py-16 lg:py-28 flex flex-col justify-center">
+      <div className="max-layout-container">
+        <div className="grid grid-cols-1 lg:grid-cols-[30%_70%] gap-12 lg:gap-0">
+          <div className="lg:pr-6">
+            <h2 class="font-nunito font-medium text-3xl lg:text-[50px] lg:leading-[60px] tracking-normal">
               {page?.title}
             </h2>
-            <p class="font-dm font-normal text-[16px] leading-[26px] tracking-normal align-middle text-[#EFEFEF] mt-4 max-w-[367px]">
+            <p class="font-dm font-normal text-base leading-[26px] tracking-normal align-middle text-[#EFEFEF] mt-4">
               {page?.description}
             </p>
             <Link
@@ -60,7 +59,7 @@ const Section6 = () => {
             </Link>
           </div>
 
-          <div>
+          <div className="lg:pl-6">
             <div className="mb-12">
               {page?.numberedCards?.map((card, index) => (
                 <div
@@ -84,7 +83,7 @@ const Section6 = () => {
               ))}
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
               {page?.featureCards?.map((card, index) => (
                 <div
                   key={index}

@@ -6,6 +6,7 @@ import Section4 from "./Section4";
 import ClientTestimonial from "./ClientTestimonial";
 import ExpertAndApproach from "./ExperAndAppro";
 import Section7 from "./Section7";
+import Footer from "../../Footer";
 import "./services.css";
 
 const myBreadcrumbs = [
@@ -64,6 +65,9 @@ export default function Services() {
 
       {/* Section7 */}
       <Section7 />
+
+      {/* Footer */}
+      <Footer />
     </div>
   );
 }

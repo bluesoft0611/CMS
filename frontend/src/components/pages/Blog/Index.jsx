@@ -58,12 +58,12 @@ export default function Blog() {
 
       {/* Categories */}
       <section class="mb-16 bg-[#d9e5f166]">
-        <div className="max-layout-container">
+        <div className="w-full md:max-w-[1540px] mx-auto md:px-4 lg:px-8">
           <div className="flex flex-col md:flex-row items-center justify-center md:justify-start">
             {categories.map((category, ind) => (
               <div key={category.label} className="w-full md:w-auto">
                 <button
-                  className={`py-4 w-full md:w-auto px-8 mx-0 md:mx-2 hover:bg-[#d9e5f1] text-primary ${
+                  className={`py-4 w-full md:w-auto px-8 mx-0 hover:bg-[#d9e5f1] text-primary ${
                     openCategory === ind && baseButtonClasses
                   }`}
                   onClick={() => toggleCategory(ind)}
@@ -88,7 +88,7 @@ export default function Blog() {
       {/* Blogs */}
       <section className="pb-24">
         <div className="max-layout-container">
-          <div className="flex flex-col md:flex-row columns-3 gap-2 gap-y-16 justify-between flex-wrap">
+          <div className="flex flex-col md:flex-row columns-3 gap-2 gap-y-16 justify-between flex-wrap my-16">
             {Array.from({ length: 6 }).map((_, ind) => (
               <React.Fragment key={ind}>
                 <CommonCard
